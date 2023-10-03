@@ -13,7 +13,7 @@ app.get("/",(req,res)=>{
 
 app.use(express.json());
 
-app.use("/item-list",itemsList)
+app.get("/item-list",itemsList)
 
 //details
 app.use("/details",allRoutes)
