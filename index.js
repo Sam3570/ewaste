@@ -22,5 +22,5 @@ app.use("/details",allRoutes)
 
 
 app.listen(PORT,()=>{
-    console.log(`server  runnging on port 8080 ${PORT}`);
+    console.log(`server  runnging on port ${PORT}`);
 })
