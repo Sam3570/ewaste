@@ -1,8 +1,11 @@
 const express = require('express')
 var cors = require('cors');
+require('dotenv').config()
 const app = express()
 const itemsList = require('./Routes/ItemsList')
 const allRoutes = require('./Routes/allRoutes')
+ const PORT = process.env.PORT || 6010
+
 app.use(cors());
 app.get("/",(req,res)=>{
     res.send("Hola")
@@ -18,6 +21,6 @@ app.use("/details",allRoutes)
 // app.use("/changes",Admin)
 
 
-app.listen(8080,()=>{
-    console.log("server  runnging on port 8080");
+app.listen(PORT,()=>{
+    console.log(`server  runnging on port 8080 ${PORT}`);
 })
